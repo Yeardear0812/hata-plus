@@ -31,6 +31,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: "Arial";
+
+}
 .wrapper{
     max-width: 960px;
     margin: 0 auto;
@@ -50,10 +54,16 @@ a {
 .items_center{
     align-items: center;
 }
+header{
+    padding-top:55px;
 
+}
 .top-header{
+    
     padding: 14px 0 ;
     background-color: #1f1f56;
+    position: fixed;
+    width: 100%;
 }
 .top-header ul{
     gap: 26px;
@@ -62,15 +72,22 @@ a {
     
     font-size: 14px;
     letter-spacing: 2px;
-    line-height: 24px;
+    line-height: 1.9em;
     color: #b1b1d2;
     font-family: "Arial";
 }
 .top-header li > a:hover{
     color:#fd8300;
 }
+.list_social svg{
+    fill: #fff;
+}
+.list_social li:hover svg{
+    fill:#fd8300;
+    transition: .5;
+}
 .picture-nav{
-    gap:23
+    gap:23px;
 }
 .main-header{
     padding: 29px 0;
@@ -149,13 +166,15 @@ a {
 .main-text h1{
     font-size: 30px;
     color: #24242b;
-    font-weight: 400;
     font-family: "Roboto Slab";
     padding-bottom: 28px;
 
 }
 main{
     padding:29px 0 47px ;
+}
+.main1{
+    gap:28px;
 }
 .main-text p{
     min-width: 669px;
@@ -164,6 +183,7 @@ main{
     color: #666666;
     font-family: "Arial";
     padding-bottom: 25px;
+    font-weight: 400;
 }
 .main-text a{
     font-size: 14px;
@@ -173,6 +193,7 @@ main{
     font-weight: bold;
     font-family: "Arial";
     padding-bottom: 44px;
+    max-width: 669px;
 }
 .side-menu p{
     font-size: 16px;
@@ -182,11 +203,11 @@ main{
     font-family: "Roboto Slab";
     background-color: #1f1f56;
     min-width: 219px;
-    padding: 16px 0 13px 15px;
+    padding: 11px 0 10px 15px;
 }
 .side-menu a{
     background-color: #e4e4ec;
-    padding: 16px 0 13px 15px;
+    padding: 11px 0 10px 15px;
     display: block;
     font-size: 14px;
     line-height: 1.9em;
@@ -219,6 +240,9 @@ main{
     color: #666666;
     font-family: "Arial";
 }
+.nav{
+    position: sticky;
+}
 .menu >li>a:after{
     content: "";
     display: inline-block;
@@ -233,16 +257,20 @@ main{
     transform: rotate(-45deg);
 }
 .menu li:hover a:after{
-    transition: 1;
+    transition: .1;
     border-color: #fff;
     transform: translateY(-50%) rotate(45deg);
 }
+.houses{
+    gap: 28px;
+
+}
 .houses2 h2{
+
     padding: 24px 0;
     font-size: 24px;
     line-height: 1em;
     color: #24242b;
-    font-weight: 400;
     font-family: "Roboto Slab";
 }
 .houses h3{
@@ -269,6 +297,11 @@ main{
     text-decoration: none;
     position: relative;
     padding-bottom: 13px;
+    display: block;
+}
+.company_news a:hover{
+    transition: .5;
+    color: #fd8300;
 }
 .company_news a:before{
     content: "";
@@ -276,10 +309,37 @@ main{
     left: 0;
     display: inline-block;
     width: 0;
-    bottom: 0;
+    bottom:7px;
     height: 1px;
     background-color: #fd8300;
     transition: .5s;
+
+}
+.company_info a{
+    font-size: 14px;
+    color: #666666;
+    font-family: "Arial";
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 13px;
+    display: block;
+}
+.company_info a:hover{
+    transition: .5;
+    color: #fd8300;
+}
+.company_info a:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 0;
+    bottom:7px;
+    height: 1px;
+    background-color: #fd8300;
+    transition: .5s;
+}.company_info a:hover:before{
+    width: 100%;
 }
 .company_news a:hover:before{
     width: 100%;
