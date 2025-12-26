@@ -14,7 +14,7 @@
         url('../font/RobotoSlab-Medium.woff') format('woff'),
         url('../font/RobotoSlab-Medium.ttf') format('truetype');
     font-weight: 500;
-    font-style: normal;../font/
+    font-style: normal;
     font-display: swap;
 }
 @font-face {
@@ -59,11 +59,13 @@ header{
 
 }
 .top-header{
-    
+    z-index: 10;
     padding: 14px 0 ;
     background-color: #1f1f56;
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
 }
 .top-header ul{
     gap: 26px;
@@ -98,32 +100,74 @@ header{
     color: #25252c;
     font-weight: bold;
     font-family: "Arial";
+    display: inline-block;
+    transition: .5s;
 }
-.email a{
+.phone_text{
+    font-size: 18px;
+    line-height: 1.3em;
+    color: #25252c;
+    font-weight: bold;
+    font-family: "Arial";
+    display: inline-block;
+    transition: .5s;
+}
+.phone_text:hover{
+    transform: scale(0.9);
+    color: #666666;
+}
+
+.left a{
+    padding-left: 22px;
+    
+}
+.left a:hover{
+    transform: scale(0.9);
+    color: #666666;
+}
+.email_span{
     font-size: 16px;
     line-height: 1.5em;
     text-decoration: underline;
     color: #25252c;
     font-family: "Arial";
+    display: inline-block;
+    transition: 0.5s;
 }
-.skype a{
+.email_span:hover{
+    color: #f7aa6a;
+    transform: scale(0.95);
+}
+.skype_span{
     font-size: 16px;
     line-height: 1.5em;
     color: #25252c;
     font-family: "Arial";
+    display: inline-block;
+    transition: 0.5s;
+}
+.skype_span:hover{
+    color: #f7aa6a;
+    transform: scale(0.95);
 }
 .text{
-    padding: 12px 27px;
+    padding: 14px 27px;
     border-radius: 25px;
     background-color: #ffffff;
     border: 2px solid #fd8300;
 }
+
 .text a{
     font-size: 16px;
     line-height: 1.5px;
     color: #25252c;
     font-weight: bold;
     font-family: "Arial";
+    transition: .5s;
+    display: inline-block;
+}
+.text a:hover{
+    transform: scale(1.05);
 }
 .bot-head{
     padding: 59px 0 43px 0;
@@ -196,6 +240,7 @@ main{
     max-width: 669px;
 }
 .side-menu p{
+    border-radius: 3px 3px 0 0;
     font-size: 16px;
     line-height: 1.5em;
     color: #ffffff;
@@ -206,6 +251,7 @@ main{
     padding: 11px 0 10px 15px;
 }
 .side-menu a{
+    
     background-color: #e4e4ec;
     padding: 11px 0 10px 15px;
     display: block;
@@ -215,7 +261,10 @@ main{
     font-family: "Arial";
     position: relative;
 }
+.border a{
+    border-radius: 0 0 3px 3px;
 
+}
 .sub_menu{
     max-height: 0px;
     visibility: hidden;
@@ -253,11 +302,10 @@ main{
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%) ;
-    transform: rotate(-45deg);
+    transform: translateY(-50%) rotate(-45deg) ;
 }
 .menu li:hover a:after{
-    transition: .1;
+    transition: .1s;
     border-color: #fff;
     transform: translateY(-50%) rotate(45deg);
 }
@@ -279,12 +327,32 @@ main{
     color: #1f1f56;
     font-weight: bold;
     font-family: "Arial";
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+.houses h3:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 0;
+    bottom:7px;
+    height: 2px;
+    background-color: #1f1f56;
+    transition: .5s;
+
+}
+.houses h3:hover::before{
+    width: 100%;
 }
 .houses p{
     font-size: 13px;
     line-height: 1.4em;
     color: #9999a6;
     font-family: "Arial";
+    text-decoration: none;
+    position: relative;
 }
 .top-footer{
     padding: 41px 0 30px ;
@@ -325,7 +393,7 @@ main{
     display: block;
 }
 .company_info a:hover{
-    transition: .5;
+    transition: .5s;
     color: #fd8300;
 }
 .company_info a:before{
