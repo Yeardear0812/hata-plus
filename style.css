@@ -35,6 +35,13 @@ body{
     font-family: "Arial";
 
 }
+svg{
+    fill: #fff;
+    transition: 0.1s;
+}
+svg:hover{
+    fill: #fd8300;;
+}
 .wrapper{
     max-width: 960px;
     margin: 0 auto;
@@ -94,6 +101,11 @@ header{
 .main-header{
     padding: 29px 0;
 }
+.social-madia {
+    border-left:  solid #e4e4ec;
+    padding-left: 35px;
+}
+
 .phone a{
     font-size: 18px;
     line-height: 1.3em;
@@ -194,24 +206,28 @@ header{
 .forcenter{
     text-align: center;
 }
-.price b{
-    font-size: 40px;
+
+.price-number {
+    font-size: 40px;       
     color: #fd8300;
     font-weight: bold;
     font-family: "Arial";
 }
-.price span{
-    font-size: 24px;
+
+.price-grn {
+    font-size: 24px;       
     line-height: 1em;
     color: #fd8300;
     font-weight: bold;
     font-family: "Arial";
 }
+
+
 .main-text h1{
     font-size: 30px;
     color: #24242b;
     font-family: "Roboto Slab";
-    padding-bottom: 28px;
+    padding-bottom: 10px;
 
 }
 main{
@@ -221,12 +237,12 @@ main{
     gap:28px;
 }
 .main-text p{
-    min-width: 669px;
+    max-width: 669px;
     font-size: 14px;
     line-height: 1.7em;
     color: #666666;
     font-family: "Arial";
-    padding-bottom: 25px;
+    padding-bottom: 11px;
     font-weight: 400;
 }
 .main-text a{
@@ -236,8 +252,15 @@ main{
     color: #fd8300;
     font-weight: bold;
     font-family: "Arial";
-    padding-bottom: 44px;
+    padding-top:17px;
     max-width: 669px;
+    display: inline-block;
+    transition: .5s;
+}
+.main-text a:hover{
+    transform: scale(1.1);
+    color: #f7aa6a;
+
 }
 .side-menu p{
     border-radius: 3px 3px 0 0;
@@ -250,6 +273,15 @@ main{
     min-width: 219px;
     padding: 11px 0 10px 15px;
 }
+.line {
+    border: none;             
+    height: 1px;              
+    background-color: #e4e4ec;
+        margin: 10px 0 0 0;        
+    margin-top: 34px;
+    width: 100%;      
+}
+
 .side-menu a{
     
     background-color: #e4e4ec;
@@ -289,9 +321,10 @@ main{
     color: #666666;
     font-family: "Arial";
 }
-.nav{
+.menu{
     position: sticky;
 }
+    
 .menu >li>a:after{
     content: "";
     display: inline-block;
@@ -315,7 +348,7 @@ main{
 }
 .houses2 h2{
 
-    padding: 24px 0;
+    padding: 34px 0 24px;
     font-size: 24px;
     line-height: 1em;
     color: #24242b;
