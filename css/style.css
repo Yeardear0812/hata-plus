@@ -279,9 +279,11 @@ main{
     background-color: #e4e4ec;
     margin-top: 34px;
 }
+.side-menu li + li{
+    border-top: 1px solid #d1d1dc;
 
+}
 .side-menu a{
-    border-bottom: 1px solid #d1d1dc;
     background-color: #e4e4ec;
     padding: 11px 0 10px 15px;
     display: block;
