@@ -184,7 +184,7 @@ header{
 .bot-head{
     padding: 59px 0 43px 0;
 
-    background:url(img/main-bg.png) no-repeat center/cover; 
+    background:url(../img/main-bg.png) no-repeat center/cover; 
 
 }
 .bot-head h2{
@@ -277,13 +277,11 @@ main{
     border: none;             
     height: 1px;              
     background-color: #e4e4ec;
-        margin: 10px 0 0 0;        
     margin-top: 34px;
-    width: 100%;      
 }
 
 .side-menu a{
-    
+    border-bottom: 1px solid #d1d1dc;
     background-color: #e4e4ec;
     padding: 11px 0 10px 15px;
     display: block;
@@ -296,6 +294,9 @@ main{
 .border a{
     border-radius: 0 0 3px 3px;
 
+}
+.sub_menu a{
+    padding-left: 30px;
 }
 .sub_menu{
     max-height: 0px;
