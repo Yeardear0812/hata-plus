@@ -345,9 +345,23 @@ main{
     border-color: #fff;
     transform: translateY(-50%) rotate(45deg);
 }
+
 .houses{
     gap: 28px;
 
+}
+.houses picture{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.houses img{
+    width: 100%;
+    object-fit: hidden;
+    transition: 0.5s;
+}
+.houses a:hover picture  img {
+    transform: scale(1.2);
 }
 .houses2 h2{
 
@@ -379,7 +393,8 @@ main{
     transition: .5s;
 
 }
-.houses h3:hover::before{
+
+.houses a:hover h3::before {
     width: 100%;
 }
 .houses p{
