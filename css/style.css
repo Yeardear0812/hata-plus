@@ -77,9 +77,40 @@ header{
     top: 0;
     left: 0;
 }
-.header__wrapper{
-    display: flex;
-    flex-wrap: wrap;
+.cancel img{
+    width: 35px;
+}
+.black1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1 , 8 ,44 , 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 5;
+
+}
+.cancel{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.main-nav{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: #1f1f56;
+    width: 80vw;
+    height: 100vh;
+    padding: 30px 0;
+    transition: .5s;
+}
+.main-nav li{
+    padding: 10px 15px;
+}
+.main-nav a{
+    display: block;
 }
 .top-header ul{
     gap: 26rem;
@@ -105,10 +136,25 @@ header{
 .picture-nav{
     gap:23rem;
 }
+.burger span{
+    display: block;
+    height: 3px;
+    margin-bottom: 4px;
+    background-color: #ffffff;
+    border-radius: 2px;
+}
+.burger span{
+    width: 30px;
+}
+
 .main-header{
     padding: 29rem 0;
     flex-wrap: wrap;
     gap: 10px;
+}
+.logo{
+    width: 100%;
+    text-align: center;
 }
 .social-madia {
     border-left: none;
@@ -172,13 +218,15 @@ header{
     transform: scale(0.95);
 }
 .text{
+    width: 100%;
+    text-align: center;
+}
+
+.text a{
     padding: 14rem 27rem;
     border-radius: 25rem;
     background-color: #ffffff;
     border: 2rem solid #fd8300;
-}
-
-.text a{
     font-size: 16rem;
     line-height: 1.5rem;
     color: #25252c;
@@ -230,21 +278,20 @@ header{
     font-weight: bold;
     font-family: "Arial";
 }
-.main1{
-    flex-wrap: wrap-reverse;
-}
+
 
 .main-text h1{
     font-size: 30rem;
     color: #24242b;
     font-family: "Roboto Slab";
     padding-bottom: 10rem;
-
+    
 }
 main{
     padding:29rem 0 47rem ;
 }
 .main1{
+    flex-wrap: wrap-reverse;
     gap:28rem;
 }
 .main-text p{
@@ -362,7 +409,8 @@ main{
 
 .houses{
     gap: 28rem;
-
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
 }
 .houses picture{
     display: block;
@@ -419,9 +467,17 @@ main{
     text-decoration: none;
     position: relative;
 }
+.bot-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    gap: 10px;
+}
+
 .top-footer{
     padding: 41rem 0 30rem ;
     background-color: #ededf5;
+
 }
 .company_news a{
     font-size: 14rem;
@@ -488,9 +544,39 @@ main{
     text-align: center;
     padding: 17rem 0 15rem ;
 }
-@media screen and (min-width: 338px) {
-    .social-madia{
-    border-left:  solid #e4e4ec;
-    padding-left: 35rem;
+@media screen and (min-width: 650px) {
+    .black1,
+    .burger,
+    .cancel{
+        display: none;
+    }
+    .main-nav{
+        position: static;
+        display: flex;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    .main-nav li{
+        padding: 0;
+    }
+    .houses{
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+    .bot-info{
+        grid-template-columns: repeat(4, 1fr);
+        text-align: left;
+    }
+    .logo{
+        width: auto;
+        text-align: right;
+    }
+    .text{
+        width: auto;
+        text-align: right;
+    }
+    .main1{
+        flex-wrap: nowrap;
     }
 }
