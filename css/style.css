@@ -84,6 +84,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    display: none;
     width: 100%;
     height: 100%;
     background: rgba(1 , 8 ,44 , 0.5);
@@ -128,6 +129,7 @@ header{
 }
 .list_social svg{
     fill: #fff;
+    text-align: left;
 }
 .list_social li:hover svg{
     fill:#fd8300;
@@ -550,6 +552,10 @@ main{
     .cancel{
         display: none;
     }
+    .side-menu{
+        max-width: 220rem;
+    
+    }
     .main-nav{
         position: static;
         display: flex;
@@ -583,7 +589,7 @@ main{
 @media screen and (min-width: 1024px) {
     html{
         font-size: 1px;
-
+        
     }
     
 }
