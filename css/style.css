@@ -213,10 +213,10 @@ header{
 .phone_text:hover{
     transform: scale(0.9);
     color: #666666;
-}
+}gir
 
 .left a{
-    padding-left: 22rem;
+    padding-left: 19rem;
     
 }
 .left a:hover{
@@ -254,7 +254,7 @@ header{
 }
 
 .text a{
-    padding: 14rem 27rem;
+    padding: 20.5rem 18rem;
     border-radius: 25rem;
     background-color: #ffffff;
     border: 2rem solid #fd8300;
