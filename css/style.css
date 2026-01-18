@@ -213,11 +213,9 @@ header{
 .phone_text:hover{
     transform: scale(0.9);
     color: #666666;
-}gir
-
+}
 .left a{
     padding-left: 19rem;
-    
 }
 .left a:hover{
     transform: scale(0.9);
