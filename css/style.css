@@ -698,5 +698,25 @@ main{
         font-size: 1.5px;
 
     }
-    
+    .logo img {
+        width: 300px;
+        height: auto;
+    }
+    .list_social svg,
+    .phone img,
+    .email-pic img,
+    .skype_pic img,
+    .phone_picture {
+        width: 23px;
+        height: 23px;
+    }    
+    .phone1 img,
+    .email img,
+    .skype img {
+        width: 23px;
+        height: 23px;
+    }
+    .left a{
+        padding-left: 35px;
+    }
 }
