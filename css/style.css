@@ -155,6 +155,7 @@ header{
     gap: 10px;
 }
 .logo{
+    margin-left: 10px;
     width: 100%;
     text-align: center;
 }
@@ -169,6 +170,15 @@ header{
 }
 .phone{
     margin-left: 15px;
+}
+.phone_picture{
+    padding-right: 5px;
+}
+.email-pic{
+    padding-right: 5px;
+}
+.skype_pic{
+    padding-right: 5px;
 }
 .phone a{
     font-size: 15rem;
@@ -215,14 +225,14 @@ header{
     color: #666666;
 }
 .left a{
-    padding-left: 19rem;
+    padding-left: 26px;
 }
 .left a:hover{
     transform: scale(0.9);
     color: #666666;
 }
 .email_span{
-    font-size: 15rem;
+    font-size: 14rem;
     line-height: 1.5em;
     text-decoration: underline;
     color: #25252c;
@@ -235,7 +245,7 @@ header{
     transform: scale(0.95);
 }
 .skype_span{
-    font-size: 15rem;
+    font-size: 14rem;
     line-height: 1.5em;
     color: #25252c;
     font-family: "Arial";
@@ -249,6 +259,7 @@ header{
 .text{
     width: 100%;
     text-align: center;
+    margin-right: 15px;
 }
 
 .text a{
@@ -373,6 +384,7 @@ main{
     border-top: 1rem solid #d1d1dc;
 
 }
+
 .side-menu a{
     background-color: #e4e4ec;
     padding: 11rem 0 10rem 15rem;
@@ -471,6 +483,15 @@ main{
     position: relative;
     display: inline-block;
     padding-bottom: 3rem;
+}
+.email2{
+    display: flex;
+}
+.skype2{
+    display: flex;
+}
+.tel2{
+    display: flex;
 }
 .houses h3:before{
     content: "";
@@ -591,6 +612,18 @@ main{
     }
 
 }
+@media screen and (min-width: 507px) {
+    .text{
+        width: auto;
+        text-align: right;
+    }
+}
+@media screen and (max-width: 649px) {
+    .burger {
+        margin-left: auto;
+    }
+}
+
 @media screen and (min-width: 650px) {
     .black1,
     .burger,
@@ -619,20 +652,27 @@ main{
         grid-template-columns: repeat(4, 1fr);
         text-align: left;
     }
-    .logo{
-        width: auto;
-        text-align: right;
-    }
-    .text{
-        width: auto;
-        text-align: right;
-    }
     .main1{
         flex-wrap: nowrap;
     }
     
 }
+@media screen and (min-width: 737px) {
+    .logo{
+        margin: 0;
+        width: auto;
+        text-align: right;
+    }
+
+    
+}
+@media screen and (max-width: 650px) {
+    .left a {
+        padding-left: 25px;
+    }
+}
 @media screen and (min-width: 1024px) {
+
     html{
         font-size: 1px;
         
