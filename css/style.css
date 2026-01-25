@@ -62,12 +62,14 @@ a {
     
 }
 .items_center{
+    display: flex;
     align-items: center;
 }
 header{
     padding-top:55rem;
     
 }
+
 .top-header{
     z-index: 10;
     padding: 14rem 0 ;
@@ -318,8 +320,20 @@ header{
     font-weight: bold;
     font-family: "Arial";
 }
-
-
+.main_text h1{
+    padding-bottom: 22px;
+    font-size: 24rem;
+    line-height: 1em;
+    color: #24242b;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+}
+.main_text p{
+    font-size: 14rem;
+    line-height: 1.7em;
+    color: #666666;
+    font-family: "Arial";
+}
 .main-text h1{
     font-size: 30rem;
     color: #24242b;
@@ -327,11 +341,85 @@ header{
     padding-bottom: 10rem;
     
 }
+.main_text a{
+    font-size: 14rem;
+    line-height: 1.7em;
+    text-decoration: underline;
+    color: #fd8300;
+    font-weight: bold;
+    font-family: "Arial";
+    padding-top:17rem;
+    max-width: 669rem;
+    display: inline-block;
+    transition: .5s;
+}
+.main_text a:hover{
+    transform: scale(1.1);
+    color: #f7aa6a;
+
+}
+table {
+    min-width: 960px; 
+    border-collapse: collapse; 
+    margin-top: 27px; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+td + td{
+    border-left: 1px solid #cecedd; 
+}
+tr + tr{
+    border-top: 1px solid #cecedd;
+
+}
+td:first-child {
+    text-align: left; 
+}
+
+td:last-child {
+    text-align: right; 
+}
+th:first-child {
+    text-align: left; 
+}
+th:last-child {
+    text-align: right; 
+}
+.tr1 th{
+    background-color: #1f1f56;
+    font-size: 14rem;
+    line-height: 1,7em;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+}
+.tr2,
+.tr3,
+.tr4,
+.tr5,
+.tr6,
+.tr7{
+    background-color: #e4e4ec;
+    font-size: 14rem;
+    line-height: 1.7em;
+    color: #666666;
+    font-family: "Arial";
+}
+table tbody tr:hover {
+    background-color: #fd8300;
+    transition: .3s;
+    color: #fff;
+
+}
+
 main{
     padding:29rem 0 47rem ;
 }
 .main1{
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
     gap:28rem;
 }
 .main-text p{
@@ -380,7 +468,7 @@ main{
     background-color: #e4e4ec;
     margin-top: 34rem;
 }
-.side-menu li + li{
+.side-menu nav > ul > li + li{
     border-top: 1rem solid #d1d1dc;
 
 }
@@ -446,6 +534,9 @@ main{
     transition: .1s;
     border-color: #fff;
     transform: translateY(-50%) rotate(45deg);
+}
+.bot{
+    padding-top: 27rem;
 }
 
 .houses{
@@ -645,7 +736,7 @@ main{
         padding: 0;
     }
     .houses{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
 
     }
     .bot-info{
@@ -653,7 +744,7 @@ main{
         text-align: left;
     }
     .main1{
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
     
 }
