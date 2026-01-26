@@ -118,6 +118,23 @@ header{
 .top-header ul{
     gap: 26rem;
 }
+.main-nav > li{
+    position: relative;
+}
+.head-submenu, .head-subsubmenu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    padding-top: 20px;
+}
+.head-submenu a, .head-subsubmenu a{
+    background-color: #e4e4ec;
+}
+#cancelsub, #cancelsubsub{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
 .top-header ul a{
     
     font-size: 14rem;
@@ -325,7 +342,6 @@ header{
     font-size: 24rem;
     line-height: 1em;
     color: #24242b;
-    font-weight: 400;
     font-family: "Roboto Slab";
 }
 .main_text p{
@@ -364,8 +380,8 @@ table {
     margin-top: 27px; 
 }
 
-th, td {
-    padding: 10px;
+tbody th, td {
+    padding: 11px;
     text-align: center;
 }
 td + td{
@@ -375,6 +391,10 @@ tr + tr{
     border-top: 1px solid #cecedd;
 
 }
+th+ th{
+    border-left: 1px solid #cecedd; 
+}
+
 td:first-child {
     text-align: left; 
 }
@@ -391,7 +411,6 @@ th:last-child {
 .tr1 th{
     background-color: #1f1f56;
     font-size: 14rem;
-    line-height: 1,7em;
     color: #ffffff;
     font-weight: 400;
     font-family: "Roboto Slab";
@@ -733,7 +752,33 @@ main{
         padding: 0;
     }
     .main-nav li{
+        position: relative;
         padding: 0;
+    }
+    .head-submenu::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        height: 5px;
+        width: 100%;
+    }
+    .main-nav >li:hover > .head-submenu {
+        display: block;
+        top: calc(100% +5px);
+    }
+    .head-submenu > li {
+        position: relative;
+    }
+    .head-submenu >li:hover > .head-subsubmenu{
+        display: block;
+        top: 0;
+        left: 100%;
+        padding-left: 5px;
+    }
+    #cancelsub, #cancelsubsub{
+        display: none;
     }
     .houses{
         grid-template-columns: repeat(4, 1fr);
