@@ -124,11 +124,20 @@ header{
 .head-submenu, .head-subsubmenu{
     display: none;
     position: absolute;
-    width: 100%;
+    min-width: 125px;
     padding-top: 20px;
 }
 .head-submenu a, .head-subsubmenu a{
     background-color: #e4e4ec;
+}
+.head-submenu  li + li {
+    border-top: 1rem solid #d1d1dc;
+    border-radius: 3px;
+
+}
+.head-submenu a{ 
+    display: block;
+    padding: 9px;
 }
 #cancelsub, #cancelsubsub{
     position: absolute;
@@ -375,26 +384,33 @@ header{
 
 }
 table {
-    min-width: 960px; 
+    border-radius: 3px;
+    overflow: hidden;
+    width: 100%;
     border-collapse: collapse; 
     margin-top: 27px; 
 }
-
+thead tr {
+    border-radius: 3px;
+}
 tbody th, td {
-    padding: 11px;
+    padding: 7px;
     text-align: center;
 }
-td + td{
+tbody td + td{
     border-left: 1px solid #cecedd; 
 }
-tr + tr{
+tbody tr + tr{
     border-top: 1px solid #cecedd;
 
 }
 th+ th{
-    border-left: 1px solid #cecedd; 
+    border-left: 1px solid #264568; 
 }
+thead tr + tr{
+    border-top: 1px solid #264568;
 
+}
 td:first-child {
     text-align: left; 
 }
@@ -409,6 +425,7 @@ th:last-child {
     text-align: right; 
 }
 .tr1 th{
+    padding: 7px;
     background-color: #1f1f56;
     font-size: 14rem;
     color: #ffffff;
