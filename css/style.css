@@ -118,42 +118,18 @@ header{
 .top-header ul{
     gap: 26rem;
 }
-.main-nav > li{
-    position: relative;
-}
-.head-submenu, .head-subsubmenu{
-    display: none;
-    position: absolute;
-    min-width: 125px;
-    padding-top: 20px;
-}
-.head-submenu a, .head-subsubmenu a{
-    background-color: #e4e4ec;
-}
-.head-submenu  li + li {
-    border-top: 1rem solid #d1d1dc;
-    border-radius: 3px;
 
-}
-.head-submenu a{ 
-    display: block;
-    padding: 9px;
-}
-#cancelsub, #cancelsubsub{
-    position: absolute;
-    top: 0;
-    right: 10px;
-}
 .top-header ul a{
     
-    font-size: 14rem;
+    font-size: 12px;
     letter-spacing: 2rem;
     line-height: 1.9em;
     color: #b1b1d2;
     font-family: "Arial";
 }
-.top-header li > a:hover{
+.top-header li:hover > a{
     color:#fd8300;
+    transition: .5s;
 }
 .list_social svg{
     fill: #fff;
@@ -165,6 +141,57 @@ header{
 }
 .picture-nav{
     gap:23rem;
+}
+
+.head-submenu, .head-subsubmenu{
+    display: none;
+    position: absolute;
+    min-width: 125px;
+    padding-top: 20px;
+}
+.head-submenu a, .head-subsubmenu a{
+    background-color: #e4e4ec;
+    
+}
+.head-submenu li + li {
+    border-top: 1rem solid #d1d1dc;
+
+}
+.head-submenu >li>a:after{
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-right: 1rem solid #000;
+    border-bottom: 1rem solid #000;
+    position: absolute;
+    right: 15rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg) ;
+}
+.head-submenu li:hover a:after{
+    transition: .1s;
+    border-color: #fff;
+    transform: translateY(-50%) rotate(45deg);
+}
+.head-submenu a{ 
+    display: block;
+    padding: 4px;
+    line-height: normal;
+    
+
+}
+.head-submenu li:hover > a,
+.head-subsubmenu li:hover > a{
+    color: #fff;
+    background-color: #fd8300;
+    transition: .3s;
+}
+
+#cancelsub, #cancelsubsub{
+    position: absolute;
+    top: 0;
+    right: 10px;
 }
 .burger span{
     display: block;
@@ -383,9 +410,14 @@ header{
     color: #f7aa6a;
 
 }
+.tables{
+    overflow-x: auto; 
+    max-width: 100%;
+}
 table {
     border-radius: 3px;
     overflow: hidden;
+    min-width: 960px;
     width: 100%;
     border-collapse: collapse; 
     margin-top: 27px; 
@@ -404,25 +436,36 @@ tbody tr + tr{
     border-top: 1px solid #cecedd;
 
 }
-th+ th{
-    border-left: 1px solid #264568; 
-}
-thead tr + tr{
-    border-top: 1px solid #264568;
 
-}
 td:first-child {
     text-align: left; 
+}
+th{
+    border:1px solid #264568;
+}
+thead tr:first-child th{
+    border-top:none;
+}
+
+thead tr th:first-child{
+    border-left:none;
+}
+
+
+thead tr th:last-child{
+    border-right:none;
 }
 
 td:last-child {
     text-align: right; 
 }
-th:first-child {
+.th1{
+
     text-align: left; 
 }
-th:last-child {
+.th3 {
     text-align: right; 
+    padding-left: 20px;
 }
 .tr1 th{
     padding: 7px;
@@ -739,7 +782,7 @@ main{
     }
 
 }
-@media screen and (min-width: 507px) {
+@media screen and (min-width: 515px) {
     .text{
         width: auto;
         text-align: right;
@@ -806,7 +849,7 @@ main{
         text-align: left;
     }
     .main1{
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     
 }
