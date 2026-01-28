@@ -14,38 +14,43 @@ cancel.onclick = (e) => {
     black1.style.display = 'none';
 };
 
-function openMenu(id) {
-    id.style.display = 'block'
-    id.style.position = 'fixed'
-    id.style.top = '0'
-    id.style.left = '0'
-    id.style.width = '100%'
-    id.style.zIndex = '1'
-}
+
+function openMenu(menu) {
+    console.log(menu)
+    menu.style.display = 'block'
+    menu.style.position = 'fixed'
+    menu.style.top = '0'
+    menu.style.left = '0'
+    menu.style.width = '100%'
+    menu.style.zIndex = '1'
+  }
   
-function closeMenu(id) {
-    id.style.display = 'none'
-    id.style.position = 'static'
-}
-if(window.innerWidth < 500) {
+  function closeMenu(menu) {
+    menu.style.display = 'none'
+    menu.style.position = 'static'
+  }
+  const submenu = document.querySelector('#submenu'),
+    subsubmenu = document.querySelector('#subsubmenu')
+  if(window.innerWidth < 500) {
     btn.onclick = (e) => {
     e.preventDefault()
-    openMenu(submenu)
-}
+    openMenu(submenu)}
+  }
   
-subbtn.onclick = (e) => {
+  subbtn.onclick = (e) => {
     e.preventDefault()
     openMenu(subsubmenu)
-}
+  }
   
-cancelsub.onclick = (e) => {
+  cancelsub.onclick = (e) => {
     e.preventDefault()
     closeMenu(submenu)
-}
-cancelsubsub.onclick = (e) => {
+  }
+  cancelsubsub.onclick = (e) => {
     e.preventDefault()
     closeMenu(subsubmenu)
-}
-}
+  }
+  
+  
   
   

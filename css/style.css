@@ -119,7 +119,7 @@ header{
     gap: 26rem;
 }
 
-.top-header ul a{
+.top-header  a{
     
     font-size: 12px;
     letter-spacing: 2rem;
@@ -174,12 +174,17 @@ header{
     border-color: #fff;
     transform: translateY(-50%) rotate(45deg);
 }
-.head-submenu a{ 
+.head-submenu > li:first-child > a{
+    border-radius: 3px 3px 0 0;   
+}
+.head-submenu > li:nth-child(4) > a{
+    border-radius: 0 0 3px 3px;   
+}
+.head-submenu  a{ 
     display: block;
     padding: 4px;
+    color: #25252c;
     line-height: normal;
-    
-
 }
 .head-submenu li:hover > a,
 .head-subsubmenu li:hover > a{
