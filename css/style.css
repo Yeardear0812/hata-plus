@@ -426,7 +426,7 @@ thead tr {
     border-radius: 3px;
 }
 tbody th, td {
-    padding: 7px;
+    padding: 7px 20px;
     text-align: center;
 }
 tbody td + td{
@@ -443,18 +443,6 @@ td:first-child {
 th{
     border:1px solid #264568;
 }
-thead tr:first-child th{
-    border-top:none;
-}
-
-thead tr th:first-child{
-    border-left:none;
-}
-
-
-thead tr th:last-child{
-    border-right:none;
-}
 
 td:last-child {
     text-align: right; 
@@ -468,7 +456,7 @@ td:last-child {
     padding-left: 20px;
 }
 .tr1 th{
-    padding: 7px;
+    padding: 7px 20px;
     background-color: #1f1f56;
     font-size: 14rem;
     color: #ffffff;
