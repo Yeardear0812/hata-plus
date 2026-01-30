@@ -72,7 +72,6 @@ header{
 
 .top-header{
     z-index: 10;
-    padding: 14rem 0 ;
     background-color: #1f1f56;
     position: fixed;
     width: 100%;
@@ -110,7 +109,7 @@ header{
     transition: .5s;
 }
 .main-nav li{
-    padding: 10px 15px;
+    padding: 3px 15px;
 }
 .main-nav a{
     display: block;
@@ -120,7 +119,7 @@ header{
 }
 
 .top-header  a{
-    
+    padding: 14rem 0 ;
     font-size: 12px;
     letter-spacing: 2rem;
     line-height: 1.9em;
@@ -147,16 +146,19 @@ header{
     display: none;
     position: absolute;
     min-width: 125px;
+}
+.head-subsubmenu{
     padding-top: 20px;
 }
 .head-submenu a, .head-subsubmenu a{
     background-color: #e4e4ec;
     
 }
-.head-submenu li + li {
-    border-top: 1rem solid #d1d1dc;
 
+.head-submenu li:not(:first-child):not(:last-child) {
+    border-top: 1px solid #d1d1dc;
 }
+
 .head-submenu >li>a:after{
     content: "";
     display: inline-block;
@@ -165,7 +167,7 @@ header{
     border-right: 1rem solid #000;
     border-bottom: 1rem solid #000;
     position: absolute;
-    right: 15rem;
+    right: 9rem;
     top: 50%;
     transform: translateY(-50%) rotate(-45deg) ;
 }
@@ -183,7 +185,7 @@ header{
 .head-subsubmenu > li:first-child > a{
     border-radius: 3px 3px 0 0;   
 }
-.head-subsubmenu > li:last-child > a{
+.head-subsubmenu > li:nth-child(4)> a{
     border-radius: 0 0 3px 3px;   
 }
 .head-submenu  a{ 
@@ -214,12 +216,14 @@ header{
 .burger span{
     width: 30px;
 }
+.shadow{
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+}
 
 .main-header{
     padding: 29rem 0;
     flex-wrap: wrap;
     gap: 10px;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
 
 }
 .logo{
@@ -237,7 +241,9 @@ header{
     padding-left: 0;
 }
 .phone{
-    margin-left: 15px;
+    padding-right: 20rem; 
+    border-right: 1px solid #cecedd; 
+    
 }
 .phone_picture{
     padding-right: 5px;
@@ -827,14 +833,14 @@ main{
     }
     .main-nav >li:hover > .head-submenu {
         display: block;
-        top: calc(100% +5px);
+        top: calc(100% + 5px);
     }
     .head-submenu > li {
         position: relative;
     }
     .head-submenu >li:hover > .head-subsubmenu{
         display: block;
-        top: 0;
+        top: -20px;
         left: 100%;
         padding-left: 5px;
     }
@@ -854,6 +860,66 @@ main{
     }
     
 }
+@media screen and (max-width: 649px) {
+    .head-submenu,
+    .head-subsubmenu {
+        display: none;         
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        background-color: #1f1f56;
+        border-radius: 0 0 8px 8px;
+        padding: 10rem 0;
+        margin: 0;
+    }
+    .head-submenu.active,
+    .head-subsubmenu.active {
+        display: flex;
+    }
+    .head-submenu li,
+    .head-subsubmenu li {
+        padding: 10rem 20rem;
+        position: relative;
+    }
+    .head-submenu li:first-child,
+    .head-subsubmenu li:first-child {
+        border-top: none;
+    }
+    .head-submenu a,
+    .head-subsubmenu a {
+        color: #25252c;
+        font-family: "Arial";
+        font-size: 14rem;
+        line-height: 1.7em;
+        display: block;
+        width: 100%;
+        transition: 0.3s;
+    }
+    .head-submenu a, .head-subsubmenu a {
+        background-color: #1f1f56;
+        color: #b1b1d2;
+    }
+    #cancelsub,
+    #cancelsubsub {
+        display: block;
+        position: absolute;
+        top: 5rem;
+        right: 10rem;
+        font-size: 18rem;
+        color: #b1b1d2;
+        cursor: pointer;
+        padding: 5rem;
+        border-radius: 50%;
+        text-align: center;
+        font-weight: bold;
+        
+    }
+    .head-subsubmenu {
+        padding-left: 20rem;
+        background-color: #1f1f56;
+    }
+}
+
 @media screen and (min-width: 737px) {
     .logo{
         margin: 0;
