@@ -120,7 +120,7 @@ header{
 
 .top-header  a{
     padding: 14rem 0 ;
-    font-size: 12px;
+    font-size: 14rem;
     letter-spacing: 2rem;
     line-height: 1.9em;
     color: #b1b1d2;
@@ -140,6 +140,7 @@ header{
 }
 .picture-nav{
     gap:23rem;
+    padding: 14rem 0;
 }
 
 .head-submenu, .head-subsubmenu{
@@ -152,7 +153,7 @@ header{
 }
 .head-submenu a, .head-subsubmenu a{
     background-color: #e4e4ec;
-    
+    font-size: 12px; 
 }
 
 .head-submenu li:not(:first-child):not(:last-child) {
@@ -221,13 +222,12 @@ header{
 }
 
 .main-header{
-    padding: 29rem 0;
+    padding: 29rem 15rem;
     flex-wrap: wrap;
     gap: 10px;
 
 }
 .logo{
-    margin-left: 10px;
     width: 100%;
     text-align: center;
 }
@@ -236,12 +236,11 @@ header{
     flex-wrap: nowrap;
 }
 .social-madia {
-    margin-right: 15px;
     border-left: none;
     padding-left: 0;
 }
 .phone{
-    padding-right: 20rem; 
+    padding-right: 15rem; 
     border-right: 1px solid #cecedd; 
     
 }
@@ -333,7 +332,6 @@ header{
 .text{
     width: 100%;
     text-align: center;
-    margin-right: 15px;
 }
 
 .text a{
@@ -939,6 +937,10 @@ main{
     html{
         font-size: 1px;
         
+    }
+    .tables{
+        overflow-x: hidden;
+        mi
     }
     
 }
