@@ -205,7 +205,7 @@ header{
 #cancelsub, #cancelsubsub{
     position: absolute;
     top: 0;
-    right: 10px;
+    right: -10px;
 }
 .burger span{
     display: block;
@@ -859,62 +859,30 @@ main{
     
 }
 @media screen and (max-width: 649px) {
-    .head-submenu,
+    .head-submenu, 
     .head-subsubmenu {
-        display: none;         
-        flex-direction: column;
-        position: relative;
+        position: static; 
+        display: none;    
         width: 100%;
-        background-color: #1f1f56;
-        border-radius: 0 0 8px 8px;
-        padding: 10rem 0;
-        margin: 0;
+        background-color: #2a2a66; 
+        padding: 0;
+        box-shadow: none;
+        padding-top:15px;
     }
-    .head-submenu.active,
-    .head-subsubmenu.active {
-        display: flex;
-    }
-    .head-submenu li,
-    .head-subsubmenu li {
-        padding: 10rem 20rem;
-        position: relative;
-    }
-    .head-submenu li:first-child,
-    .head-subsubmenu li:first-child {
-        border-top: none;
-    }
-    .head-submenu a,
+    .head-submenu a, 
     .head-subsubmenu a {
-        color: #25252c;
-        font-family: "Arial";
-        font-size: 14rem;
-        line-height: 1.7em;
-        display: block;
-        width: 100%;
-        transition: 0.3s;
-    }
-    .head-submenu a, .head-subsubmenu a {
-        background-color: #1f1f56;
+        background-color: transparent;
         color: #b1b1d2;
+        padding: 12px 25px; 
+        font-size: 12px;
     }
-    #cancelsub,
-    #cancelsubsub {
-        display: block;
-        position: absolute;
-        top: 5rem;
-        right: 10rem;
-        font-size: 18rem;
-        color: #b1b1d2;
-        cursor: pointer;
-        padding: 5rem;
-        border-radius: 50%;
-        text-align: center;
-        font-weight: bold;
-        
+    .head-submenu > li > a:after{
+        content: none !important;
     }
-    .head-subsubmenu {
-        padding-left: 20rem;
-        background-color: #1f1f56;
+    .cancelsubsub img,
+    .cancelsub img {
+        width: 25px !important; 
+        height: auto;
     }
 }
 
@@ -940,7 +908,7 @@ main{
     }
     .tables{
         overflow-x: hidden;
-        mi
+        
     }
     
 }
