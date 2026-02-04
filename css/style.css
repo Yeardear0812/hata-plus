@@ -852,7 +852,13 @@ main{
     .skype_span{
         font-size: 16rem;
     }
-
+    
+}
+@media screen and (max-width: 360px){
+    .lineri{
+        gap: 10px;
+    }
+    
 }
 @media screen and (min-width: 515px) {
     .text{
