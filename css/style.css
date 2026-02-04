@@ -510,7 +510,7 @@ main{
     padding:29rem 0 47rem ;
 }
 .main1{
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap:28rem;
 }
 .main-text p{
