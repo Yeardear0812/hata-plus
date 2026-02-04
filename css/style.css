@@ -539,6 +539,54 @@ main{
     color: #f7aa6a;
 
 }
+.main_contact h1{
+    font-size: 24rem;
+    line-height: 1em;
+    color: #24242b;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+    padding-bottom: 28rem;
+}
+.office h3,
+.details h3,
+.advice h3 {
+    font-size: 14px;
+    line-height: 1.7em;
+    color: #24242b;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+    padding-bottom: 19px;
+}
+
+.office p, 
+.advice p, 
+.details p{
+    font-size: 14px;
+    line-height: 1.5em;
+    color: #666666;
+    font-family: "Arial";
+}
+.office p,
+.advice p{
+    padding-bottom: 12px;
+}
+.num{
+    font-size: 18px;
+    line-height: 1.3em;
+    color: #25252c;
+    font-weight: bold;
+    font-family: "Arial";
+}
+.ema{
+    font-size: 16px;
+    line-height: 1.5em;
+    text-decoration: underline;
+    color: #25252c;
+    font-family: "Arial";
+}
+.first{
+    padding-bottom: 20px;
+}
 .side-menu{
     width: 100%;
 }
@@ -704,7 +752,19 @@ main{
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
-
+.main-forms{
+    padding-top: 36px;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+.forms p{
+    font-size: 14px;
+    line-height: 1.7em;
+    color: #24242b;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+    text-align: left;
+}
 .top-footer{
     padding: 41rem 0 30rem ;
     background-color: #ededf5;
@@ -903,7 +963,7 @@ main{
         width: auto;
         text-align: right;
     }
-
+    
     
 }
 @media screen and (max-width: 650px) {
@@ -969,5 +1029,8 @@ main{
     }
     .left a{
         padding-left: 35px;
+    }
+    .head-submenu a, .head-subsubmenu a {
+        font-size: 17px;
     }
 }
