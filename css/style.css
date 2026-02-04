@@ -191,7 +191,7 @@ header{
 }
 .head-submenu  a{ 
     display: block;
-    padding: 4px;
+    padding: 8px;
     color: #25252c;
     line-height: normal;
 }
@@ -225,6 +225,7 @@ header{
     padding: 29rem 15rem;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 
 }
 .logo{
@@ -235,14 +236,20 @@ header{
     display: flex;
     flex-wrap: nowrap;
 }
+.lineri{
+    gap: 20rem;
+}
 .social-madia {
     border-left: none;
     padding-left: 0;
 }
-.phone{
-    padding-right: 15rem; 
-    border-right: 1px solid #cecedd; 
-    
+
+.linephone::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 1px;
+    background-color: #e4e4ec;
 }
 .phone_picture{
     padding-right: 5px;
@@ -884,6 +891,10 @@ main{
         width: 25px !important; 
         height: auto;
     }
+    .linephone{
+        display: none;
+    }
+    
 }
 
 @media screen and (min-width: 737px) {
@@ -906,9 +917,16 @@ main{
         font-size: 1px;
         
     }
+    .main-header{
+        justify-content: space-between;
+    }
     .tables{
         overflow-x: hidden;
         
+    }
+    table{
+        min-width: 100%;
+        width: 100%;
     }
     
 }
