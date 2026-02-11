@@ -757,13 +757,84 @@ main{
     gap: 28px;
     flex-wrap: wrap;
 }
-.forms p{
+.map{
+    position: relative;
+    width: 466px;
+    min-height: 295px;
+    overflow: hidden;
+}
+
+
+iframe{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -72px;
+    left: 0;
+    border: none;
+}
+
+.forms h3{
     font-size: 14px;
     line-height: 1.7em;
     color: #24242b;
     font-weight: 400;
     font-family: "Roboto Slab";
     text-align: left;
+    padding-bottom: 22px;
+}
+input {
+    padding-left: 12rem;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #c4c4d3;
+    margin: 5px 0;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: bold;
+    font-family: "Arial";
+    font-style: italic;
+    background-color: transparent;
+
+}
+textarea {
+    height: 105px;
+    border-radius: 3px;
+    border: 1px solid #c4c4d3;
+    margin: 5px 0;
+    font-size: 13px;
+    line-height: 21px;
+    font-style: italic;
+    font-family: "Arial";
+    resize: vertical;
+    background-color: transparent;
+}
+.name{
+    display: flex;
+    gap: 10rem;
+}
+.lo{
+    width: 100%;
+}
+.txt{
+    width: 100%;
+    padding: 15rem 0 0rem 12rem;
+
+}
+.button1{
+    border: none;
+    padding: 12px 30px;
+    border-radius: 21px;
+    background-color: #fd8300;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Arial";
+    text-align: center;
+    transition: .5s;
+}
+.button1:hover{
+    transform: scale(1.1);
 }
 .top-footer{
     padding: 41rem 0 30rem ;
