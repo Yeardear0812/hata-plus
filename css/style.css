@@ -543,9 +543,12 @@ main{
     font-size: 24rem;
     line-height: 1em;
     color: #24242b;
-    font-weight: 400;
     font-family: "Roboto Slab";
     padding-bottom: 28rem;
+}
+.under_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 .office h3,
 .details h3,
@@ -553,22 +556,22 @@ main{
     font-size: 14px;
     line-height: 1.7em;
     color: #24242b;
-    font-weight: 400;
     font-family: "Roboto Slab";
-    padding-bottom: 19px;
+    padding-bottom: 9px;
 }
 
 .office p, 
 .advice p, 
 .details p{
     font-size: 14px;
-    line-height: 1.5em;
     color: #666666;
     font-family: "Arial";
 }
-.office p,
-.advice p{
+.p{
     padding-bottom: 12px;
+}
+.p1{
+    padding-bottom: 6px;
 }
 .num{
     font-size: 18px;
@@ -585,7 +588,7 @@ main{
     font-family: "Arial";
 }
 .first{
-    padding-bottom: 20px;
+    padding-bottom: 19px;
 }
 .side-menu{
     width: 100%;
@@ -753,13 +756,14 @@ main{
     gap: 10px;
 }
 .main-forms{
-    padding-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 36rem;
     gap: 28px;
-    flex-wrap: wrap;
 }
 .map{
     position: relative;
-    width: 466px;
+    min-width: 466px;
     min-height: 295px;
     overflow: hidden;
 }
@@ -767,7 +771,7 @@ main{
 
 iframe{
     width: 100%;
-    height: 100%;
+    height: calc( 100% + 72px);
     position: absolute;
     top: -72px;
     left: 0;
@@ -778,7 +782,6 @@ iframe{
     font-size: 14px;
     line-height: 1.7em;
     color: #24242b;
-    font-weight: 400;
     font-family: "Roboto Slab";
     text-align: left;
     padding-bottom: 22px;
@@ -786,12 +789,10 @@ iframe{
 input {
     padding-left: 12rem;
     height: 40px;
+    width: 100%;
     border-radius: 3px;
     border: 1px solid #c4c4d3;
     margin: 5px 0;
-    font-size: 15px;
-    line-height: 21px;
-    font-weight: bold;
     font-family: "Arial";
     font-style: italic;
     background-color: transparent;
@@ -803,11 +804,43 @@ textarea {
     border: 1px solid #c4c4d3;
     margin: 5px 0;
     font-size: 13px;
-    line-height: 21px;
     font-style: italic;
     font-family: "Arial";
     resize: vertical;
     background-color: transparent;
+}
+.checkbox0{
+    font-size: 13px;
+    line-height: 1.6em;
+    color: #666666;
+    font-family: "Arial";
+}
+.verify {
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    margin-left: 30rem;
+    margin-right: 10rem;
+}
+.verify input {
+    padding: 0;
+    appearance: none;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.verify img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    display: none;
+    width: 15rem;
+}
+input:checked+img {
+    display: block;
 }
 .name{
     display: flex;
@@ -818,8 +851,11 @@ textarea {
 }
 .txt{
     width: 100%;
-    padding: 15rem 0 0rem 12rem;
+    padding: 15rem 0 0rem 15rem;
 
+}
+.main-contentforms{
+    padding-bottom: 13px;
 }
 .button1{
     border: none;
@@ -925,12 +961,8 @@ textarea {
     }
     
 }
-@media screen and (max-width: 360px){
-    .lineri{
-        gap: 10px;
-    }
-    
-}
+
+
 @media screen and (min-width: 515px) {
     .text{
         width: auto;
@@ -938,11 +970,45 @@ textarea {
     }
 }
 @media screen and (max-width: 649px) {
+    
+    .under_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .office{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .advice{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .burger {
         margin-left: auto;
     }
+    
+    .main_contact h1 {
+        display: flex;
+        justify-content: center;
+    }
 }
 
+@media screen and (max-width: 360px){
+    .lineri{
+        gap: 10px;
+    }
+    
+    .under_container{
+        grid-template-columns: 1fr;
+    }
+}
 @media screen and (min-width: 650px) {
     .black1,
     .burger,
@@ -1034,6 +1100,11 @@ textarea {
     
 }
 
+@media screen and (max-width: 650px) {
+    .left a {
+        padding-left: 25px;
+    }
+}
 @media screen and (min-width: 737px) {
     .logo{
         margin: 0;
@@ -1043,9 +1114,18 @@ textarea {
     
     
 }
-@media screen and (max-width: 650px) {
-    .left a {
-        padding-left: 25px;
+@media screen and (max-width: 768px) {
+    .main-forms{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .map{
+        width: 100%;
+        min-width: 0;
+    }
+    .wrap{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
     }
 }
 @media screen and (min-width: 1024px) {
