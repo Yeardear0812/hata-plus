@@ -783,7 +783,7 @@ iframe{
     width: 100%;
     height: calc( 100% + 72px);
     position: absolute;
-    top: -76px;
+    top: -85px;
     left: 0;
     border: none;
 }
@@ -809,7 +809,8 @@ input {
 
 }
 textarea {
-    height: 105px;
+    min-height: 105px;
+    max-height: 250px;
     border-radius: 3px;
     border: 1px solid #c4c4d3;
     margin: 5px 0;
@@ -872,9 +873,16 @@ textarea {
     font-family: "Arial";
     text-align: center;
     transition: .5s;
+    cursor: pointer;
 }
 .button1:hover{
     transform: scale(1.1);
+}
+.one{
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px
+    
 }
 .top-footer{
     padding: 41rem 0 30rem ;
@@ -1024,6 +1032,12 @@ textarea {
         grid-template-columns: 1fr;
     }
 }
+@media screen and (max-width: 545px) {
+    .one{
+        display: flex;
+        justify-content: center;
+    }
+}
 @media screen and (min-width: 650px) {
     .black1,
     .burger,
@@ -1138,16 +1152,20 @@ textarea {
         width: 100%;
         min-width: 0;
     }
-    .wrap{
-        flex-wrap: wrap-reverse;
-        gap: 15px;
-    }
     .button1{
         width: 50%;
     }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px){
+    .one{
+        flex-wrap: wrap-reverse;
+        justify-content:center ;
+        gap: 15px;
+    }
 
+}
+@media screen and (min-width: 1024px) {
+    
     html{
         font-size: 1px;
         
@@ -1168,14 +1186,14 @@ textarea {
 @media screen and (min-width: 1440px) {
     html{
         font-size: 1.1px;
-
+        
     }
     
 }
 @media screen and (min-width: 1920px) {
     html{
         font-size: 1.3px;
-
+        
     }
     
 }
@@ -1208,4 +1226,22 @@ textarea {
     .head-submenu a, .head-subsubmenu a {
         font-size: 17px;
     }
+    .one{
+        display: flex;
+        gap: 60px
+        
+    }
+    .button1 {
+
+        width: 40%;
+    }
+}
+@media screen and (max-width: 2200px) {
+
+    .one{
+        display: flex;
+        gap: 60px
+        
+    }
+
 }
