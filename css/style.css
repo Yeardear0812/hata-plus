@@ -572,6 +572,7 @@ main{
 }
 .p1{
     padding-bottom: 6px;
+    transition: 0.5s;
 }
 .num{
     font-size: 18px;
@@ -579,6 +580,10 @@ main{
     color: #25252c;
     font-weight: bold;
     font-family: "Arial";
+    transition: .5s;
+}
+.u{
+    transition: 0.5s;
 }
 .ema{
     font-size: 16px;
@@ -586,7 +591,12 @@ main{
     text-decoration: underline;
     color: #25252c;
     font-family: "Arial";
+    transition: .5s;
 }
+.hover:hover{
+    transform: scale(1.05);
+}
+
 .first{
     padding-bottom: 19px;
 }
@@ -773,7 +783,7 @@ iframe{
     width: 100%;
     height: calc( 100% + 72px);
     position: absolute;
-    top: -72px;
+    top: -76px;
     left: 0;
     border: none;
 }
@@ -815,32 +825,26 @@ textarea {
     color: #666666;
     font-family: "Arial";
 }
-.verify {
-    position: relative;
-    display: inline-block;
-    height: 24px;
-    margin-left: 30rem;
-    margin-right: 10rem;
+.checkbox0{
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
-.verify input {
-    padding: 0;
+.checkbox0 input{
+    position: relative;
     appearance: none;
-    margin: 0;
+    outline: none;
     width: 15px;
     height: 15px;
-    border: 1px solid #ccc;
+    margin: 0;
+    border: 1px solid #c5c5d4;
     border-radius: 3px;
+    z-index: 1;
 }
-.verify img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -80%);
-    display: none;
-    width: 15rem;
-}
-input:checked+img {
-    display: block;
+.checkbox0 input:checked{
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960' fill='black'><path d='M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .name{
     display: flex;
@@ -967,6 +971,17 @@ input:checked+img {
     .text{
         width: auto;
         text-align: right;
+    }
+    
+}
+
+@media screen and (max-width: 515px) {
+    .button1{
+        width: auto;
+    }
+    .one{
+        display: flex;
+        justify-content: center;
     }
 }
 @media screen and (max-width: 649px) {
@@ -1125,7 +1140,10 @@ input:checked+img {
     }
     .wrap{
         flex-wrap: wrap-reverse;
-        justify-content: center;
+        gap: 15px;
+    }
+    .button1{
+        width: 50%;
     }
 }
 @media screen and (min-width: 1024px) {
