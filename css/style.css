@@ -798,6 +798,7 @@ iframe{
 }
 input {
     padding-left: 12rem;
+    padding-right: 12rem;
     height: 40px;
     width: 100%;
     border-radius: 3px;
