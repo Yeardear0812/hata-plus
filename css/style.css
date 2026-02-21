@@ -45,7 +45,11 @@ svg{
 svg:hover{
     fill: #fd8300;;
 }
- 
+.wrapper{
+    max-width: 960rem;
+    margin: 0 auto;
+    padding: 0 15rem;
+}
 ul{
     list-style:none;
 }
