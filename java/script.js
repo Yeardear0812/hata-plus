@@ -9,6 +9,8 @@ black1.onclick = () => {
   submenu.style.display = 'none'; 
   subsubmenu.style.display = 'none'; 
   black1.style.display = 'none'; 
+  
+  callModal.style.display = 'none';  
 };
 
 
@@ -54,7 +56,19 @@ cancelsubsub.onclick = (e) => {
   e.preventDefault()
   closeMenu(subsubmenu)
 }
-  
-  
+const callBtn = document.getElementById('callBtn');
+const callModal = document.getElementById('callModal');
+const closeCall = document.getElementById('closeCall');
+callBtn.onclick = (e) => {
+  e.preventDefault();
+  callModal.style.display = 'flex';
+  black1.style.display = 'block';
+};
+closeCall.onclick = () => {
+  callModal.style.display = 'none';
+};
+callModal.onclick = (e) => {
+  callModal.style.display = 'none';
+};
   
   
