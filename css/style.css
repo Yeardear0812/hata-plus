@@ -71,7 +71,7 @@ header{
 }
 
 .top-header{
-    z-index: 10;
+    z-index: 15;
     background-color: #1f1f56;
     position: fixed;
     width: 100%;
@@ -976,6 +976,7 @@ textarea {
     background: #fff;
     padding: 30px;
     border-radius: 5px;
+    z-index: 9;
 }
 .popap-info input {
     width: 100%;
@@ -1011,6 +1012,10 @@ textarea {
     font-weight: bold;
     font-family: "Arial";
     text-align: center;
+    transition: .5s;
+}
+.popap-info button:hover{
+    transform: scale(1.05);
 }
 .close img{
     position: absolute;
@@ -1021,6 +1026,28 @@ textarea {
     cursor: pointer;
     color: #999;
 }
+/* Lightbox стилі */
+.box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 80vw;
+    height: 80vw;
+}
+.box img{
+    width: 100%;
+    object-fit: cover;
+}
+.canсle-box{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+
+
 @media screen and (min-width: 360px){
     .phone a , p{
         font-size: 18rem;

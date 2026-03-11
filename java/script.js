@@ -68,7 +68,24 @@ closeCall.onclick = () => {
   callModal.style.display = 'none';
 };
 callModal.onclick = (e) => {
-  callModal.style.display = 'none';
+  if (e.target === callModal) {
+    callModal.style.display = 'none';
+  }
 };
-  
-  
+const popup = document.querySelector(".box");
+const popupImg = popup.querySelector("img");
+const cancelPopup = document.querySelector(".canсle-box");
+const figureImg = document.querySelectorAll("figure img");
+
+figureImg.forEach(item => {
+    item.onclick = () => {
+        popup.style.display = "block";
+        popupImg.src = item.getAttribute("src");
+    }
+});
+
+cancelPopup.onclick = (e) => {
+    e.preventDefault();
+    popup.style.display = "none";
+    popupImg.src = "";
+};
