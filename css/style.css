@@ -1026,19 +1026,23 @@ textarea {
     cursor: pointer;
     color: #999;
 }
-/* Lightbox стилі */
 .box {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform:translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: 80vw;
-    height: 80vw;
+    z-index: 10;
 }
 .box img{
-    width: 100%;
+    width: 50%;
     object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
 }
 .canсle-box{
     position: absolute;

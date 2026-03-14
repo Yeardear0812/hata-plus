@@ -66,20 +66,22 @@ callBtn.onclick = (e) => {
 };
 closeCall.onclick = () => {
   callModal.style.display = 'none';
+  black1.style.display = 'none';
 };
 callModal.onclick = (e) => {
   if (e.target === callModal) {
     callModal.style.display = 'none';
+    black1.style.display = 'none';
   }
 };
 const popup = document.querySelector(".box");
 const popupImg = popup.querySelector("img");
 const cancelPopup = document.querySelector(".canсle-box");
 const figureImg = document.querySelectorAll("figure img");
-
 figureImg.forEach(item => {
     item.onclick = () => {
         popup.style.display = "block";
+        black1.style.display = "block";
         popupImg.src = item.getAttribute("src");
     }
 });
@@ -87,5 +89,13 @@ figureImg.forEach(item => {
 cancelPopup.onclick = (e) => {
     e.preventDefault();
     popup.style.display = "none";
+    black1.style.display = "none";
+    popupImg.src = "";
+};
+
+// закриття по чорному фону
+black1.onclick = () => {
+    popup.style.display = "none";
+    black1.style.display = "none";
     popupImg.src = "";
 };
