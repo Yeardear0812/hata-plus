@@ -143,14 +143,16 @@
                 <div class="hearder__text text">
                     <a href="#" id="callBtn">Замовити дзвінок</a>
                 </div>
-                <div class="popap" id="callModal">
-                    <div class="popap-info">
-                        <p class="title">Замовити дзвінок</p>
-                        <input type="text" placeholder="Ваше ім'я" name="urname">
-                        <input type="tel" placeholder="Телефон" name="phone">
-                        <button>Відправити</button>
-                        <span class="close" id="closeCall"><img src="img/close1.svg" alt=""></span>
-                    </div>
+                <form action="botforpopap.php" method="post">
+                    <div class="popap" id="callModal">
+                        <div class="popap-info">
+                            <p class="title">Замовити дзвінок</p>
+                            <input type="text" placeholder="Ваше ім'я" name="urname">
+                            <input type="tel" placeholder="Телефон" name="phone">
+                            <button>Відправити</button>
+                            <span class="close" id="closeCall"><img src="img/close1.svg" alt=""></span>
+                        </div>
+                </form>
                 
                 </div>
                 
@@ -285,9 +287,11 @@
                             <p>Гараж: 3 авто</p>
                         </figcaption>
                     </figure>
-                    <div class="box" id="box" >
-                        <a href="" class="canсle-box">x</a>
-                        <img src="" alt="">
+                    <div class="box" id="box">
+                        <div class="img-wrapper">
+                            <a href="#" class="cancel-box">✕</a>
+                            <img src="" alt="">
+                        </div>
                     </div>
                 </div>
             </section>

@@ -5,12 +5,13 @@ burger.onclick = () => {
 
 
 black1.onclick = () => {
-  mainnav.style.left = '-100%'; 
-  submenu.style.display = 'none'; 
-  subsubmenu.style.display = 'none'; 
-  black1.style.display = 'none'; 
-  
-  callModal.style.display = 'none';  
+  popup.style.display = "none";
+  mainnav.style.left = '-100%';
+  submenu.style.display = 'none';
+  subsubmenu.style.display = 'none';
+  callModal.style.display = 'none';
+  black1.style.display = 'none';
+  popupImg.src = "";
 };
 
 
@@ -76,8 +77,9 @@ callModal.onclick = (e) => {
 };
 const popup = document.querySelector(".box");
 const popupImg = popup.querySelector("img");
-const cancelPopup = document.querySelector(".canсle-box");
+const cancelPopup = document.querySelector(".cancel-box"); 
 const figureImg = document.querySelectorAll("figure img");
+
 figureImg.forEach(item => {
     item.onclick = () => {
         popup.style.display = "block";
@@ -88,13 +90,6 @@ figureImg.forEach(item => {
 
 cancelPopup.onclick = (e) => {
     e.preventDefault();
-    popup.style.display = "none";
-    black1.style.display = "none";
-    popupImg.src = "";
-};
-
-// закриття по чорному фону
-black1.onclick = () => {
     popup.style.display = "none";
     black1.style.display = "none";
     popupImg.src = "";

@@ -141,13 +141,15 @@
                 <a href="#" id="callBtn">Замовити дзвінок</a>
             </div>
             <div class="popap" id="callModal">
-                <div class="popap-info">
-                    <p class="title">Замовити дзвінок</p>
-                    <input type="text" placeholder="Ваше ім'я">
-                    <input type="tel" placeholder="Телефон">
-                    <button>Відправити</button>
-                    <span class="close" id="closeCall"><img src="img/close1.svg" alt=""></span>
-                </div>
+                <form action="botforpopap.php" method="post">
+                    <div class="popap-info">
+                        <p class="title">Замовити дзвінок</p>
+                        <input type="text" placeholder="Ваше ім'я" name="urname">
+                        <input type="tel" placeholder="Телефон" name="phone">
+                        <button>Відправити</button>
+                        <span class="close" id="closeCall"><img src="img/close1.svg" alt=""></span>
+                    </div>
+                </form>
             
             </div>
         </div>
@@ -191,46 +193,46 @@
                     <div class="houses flex">
                         <figure class="house1">
                             <figcaption>
-                                <a href="">
-                                    <picture>
-                                        <source srcset="img/house1.webp" type="image/webp">
-                                        <img src="img/house1.png" alt="">
-                                    </picture>
-                                    <h3>EDMONTON (338 м<sup>2</sup>)</h3>
-                                    <p>Загальна площа будови: 312 м<sup>2</sup></p>
-                                    <p>Кількість спалень: 4</p>
-                                    <p>Гараж: 2 авто</p>
-                                </a>
+                                <picture>
+                                    <source srcset="img/house1.webp" type="image/webp">
+                                    <img src="img/house1.png" alt="">
+                                </picture>
+                                <h3>EDMONTON (338 м<sup>2</sup>)</h3>
+                                <p>Загальна площа будови: 312 м<sup>2</sup></p>
+                                <p>Кількість спалень: 4</p>
+                                <p>Гараж: 2 авто</p>
                             </figcaption>
                         </figure>
                         <figure class="house2">
                             <figcaption>
-                                <a href="">
-                                    <picture>
-                                        <source srcset="img/house2.webp" type="image/webp">
-                                        <img src="img/house2.png" alt="">
-                                    </picture>
-                                    <h3>MONTREAL (332 м<sup>2</sup>)</h3>
-                                    <p>Загальна площа будови: 290 м<sup>2</sup></p>
-                                    <p>Кількість спалень: 3</p>
-                                    <p>Гараж: 2 авто</p>
-                                </a>
+                                <picture>
+                                    <source srcset="img/house2.webp" type="image/webp">
+                                    <img src="img/house2.png" alt="">
+                                </picture>
+                                <h3>MONTREAL (332 м<sup>2</sup>)</h3>
+                                <p>Загальна площа будови: 290 м<sup>2</sup></p>
+                                <p>Кількість спалень: 3</p>
+                                <p>Гараж: 2 авто</p>
                             </figcaption>
                         </figure>
                         <figure class="house3">
                             <figcaption>
-                                <a href="">
-                                    <picture>
-                                        <source srcset="img/house3.webp" type="image/webp">
-                                        <img src="img/house3.png" alt="">
-                                    </picture>
-                                    <h3>CALGARY (294 м<sup></sup>2</sup>)</h3>
-                                    <p>Загальна площа будови: 272 м<sup>2</sup></p>
-                                    <p>Кількість спалень: 3</p>
-                                    <p>Гараж: 2 авто</p>
-                                </a>
+                                <picture>
+                                    <source srcset="img/house3.webp" type="image/webp">
+                                    <img src="img/house3.png" alt="">
+                                </picture>
+                                <h3>CALGARY (294 м<sup></sup>2</sup>)</h3>
+                                <p>Загальна площа будови: 272 м<sup>2</sup></p>
+                                <p>Кількість спалень: 3</p>
+                                <p>Гараж: 2 авто</p>
                             </figcaption>
                         </figure>
+                        <div class="box" id="box">
+                            <div class="img-wrapper">
+                                <a href="#" class="cancel-box">✕</a>
+                                <img src="" alt="">
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

@@ -1032,23 +1032,104 @@ textarea {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80vw;
+    max-width: 1200px;   
+    height: auto;        
     z-index: 10;
 }
-.box img{
-    width: 50%;
-    object-fit: cover;
+
+.box img {
+    width: 100%;         
+    height: auto;       
+    display: block;
+    object-fit: contain;
+}
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+    min-width: 350px;
+}
+
+
+
+
+.cancel-box {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    font-size: 20px;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.php {
+    padding: 20px 30px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #24242b;
+    font-family: 'Roboto Slab';
+    background-color: #f7f7f7;
+    border-radius: 12px;
+
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 30px;
+}
+
+.php h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #24242b;
+}
+
+
+.php2 {
+    padding: 10px 0;
+}
+
+.php2 p {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #666666;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+
+.php2 p b {
+    color: #222222; 
+}
+.MAIN2 {
     
+    padding: 40px ;
 }
-.canсle-box{
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.php a {
+    font-size: 14rem;
+    line-height: 1.7em;
+    text-decoration: underline;
+    color: #fd8300;
+    font-weight: bold;
+    font-family: "Arial";
+    padding-top: 17rem;
+    max-width: 669rem;
+    display: inline-block;
+    transition: .5s;
 }
+
+.php a:hover {
+    transform: scale(1.1);
+    transform: translateY(-2px);
+}
+
 
 
 

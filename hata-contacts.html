@@ -144,14 +144,15 @@
                     <a href="#" id="callBtn">Замовити дзвінок</a>
                 </div>
                 <div class="popap" id="callModal">
-                    <div class="popap-info">
-                        <p class="title">Замовити дзвінок</p>
-                        <input type="text" placeholder="Ваше ім'я">
-                        <input type="tel" placeholder="Телефон">
-                        <button>Відправити</button>
-                        <span class="close" id="closeCall"><img src="img/close1.svg" alt=""></span>
-                    </div>
-                
+                    <form action="botforpopap.php" method="post">
+                        <div class="popap-info">
+                            <p class="title">Замовити дзвінок</p>
+                            <input type="text" placeholder="Ваше ім'я" name='urname'>
+                            <input type="tel" placeholder="Телефон" name="phone">
+                            <button>Відправити</button>
+                            <span class="close" id="closeCall"><img src="img/close1.svg" alt=""></span>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -198,11 +199,11 @@
                     </div>
                     <div class="forms">
                         <h3>Форма зворотного зв’язку</h3>
-                        <form action="">
+                        <form action="botrocontact.php" method="post">
                             <div class="main-contentforms">
                                 <div class="name">
                                     <input type="text" placeholder="Ваше ім'я" name="username" required>
-                                    <input type="text" placeholder="Телефон" name="usersuname" required>
+                                    <input type="text" placeholder="Телефон" name="usersurname" required>
                                 </div>
                                 <br class="type-text">
                                 <input type="text" class="lo" placeholder="Тема повідомлення" name="tema" required>
