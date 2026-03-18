@@ -1038,7 +1038,7 @@ textarea {
 }
 
 .box img {
-    width: 100%;         
+    width: 100%;         /* займає всю ширину .box */
     height: auto;       
     display: block;
     object-fit: contain;
@@ -1057,12 +1057,12 @@ textarea {
     top: 10px;
     right: 10px;
     z-index: 20;
-    font-size: 20px;
+    font-size: 24px;
     color: white;
     background: rgba(0,0,0,0.6);
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1265,6 +1265,10 @@ textarea {
     }
     .houses{
         grid-template-columns: repeat(4, 1fr);
+
+    }
+    .houses1{
+        grid-template-columns: repeat(3, 1fr);
 
     }
     .bot-info{
